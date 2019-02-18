@@ -114,13 +114,13 @@ add_biome("clearing", nil, "default:dirt_with_grass", 1, "default:dirt", 3,
 	nil, nil, nil, nil, nil, 3, 71, 45, 65, 1) -- ADDED
 
 add_biome("bamboo", nil, "ethereal:bamboo_dirt", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 25, 70, 45, 75, ethereal.bamboo)
+	nil, nil, nil, nil, nil, 7, 70, 45, 75, ethereal.bamboo)
 
 --add_biome("bamboo_ocean", nil, "default:sand", 1, "default:sand", 2,
 	--nil, nil, nil, nil, nil, -192, 2, 45, 75, ethereal.bamboo)
 
 add_biome("sakura", nil, "ethereal:bamboo_dirt", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 3, 25, 45, 75, ethereal.sakura)
+	nil, nil, nil, nil, nil, 3, 7, 45, 75, ethereal.sakura)
 
 add_biome("sakura_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 2, 45, 75, ethereal.sakura)
