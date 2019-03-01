@@ -123,11 +123,12 @@ function ethereal.grow_birch_tree(pos)
 end
 
 function ethereal.grow_sakura_tree(pos)
-    if math.random(10) == 1 then
-	add_tree(pos, 4, 0, 3, path .. "sakura2.mts", {["ethereal:sakura_leaves"] = "ethereal:sakura_leaves2"})
-    else
-        add_tree(pos, 4, 0, 3, path .. "sakura.mts")
-    end
+	if math.random(10) == 1 then
+		add_tree(pos, 4, 0, 3, ethereal.sakura_tree,
+			{{"ethereal:sakura_leaves", "ethereal:sakura_leaves2"}})
+	else
+		add_tree(pos, 4, 0, 3, ethereal.sakura_tree)
+	end
 end
 
 -- check if sapling has enough height room to grow
@@ -210,7 +211,7 @@ local grow_sapling = function(pos, node)
 	elseif node.name == "ethereal:sakura_sapling"
 	and under == "ethereal:bamboo_dirt" then
 		ethereal.grow_sakura_tree(pos)
-    end
+	end
 
 end
 

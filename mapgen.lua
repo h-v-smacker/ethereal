@@ -30,6 +30,7 @@ dofile(path .. "willow.lua")
 dofile(path .. "bigtree.lua")
 dofile(path .. "redwood_tree.lua")
 dofile(path .. "vinetree.lua")
+dofile(path .. "sakura.lua")
 dofile(path .. "igloo.lua")
 
 --= Biomes
@@ -114,13 +115,13 @@ add_biome("clearing", nil, "default:dirt_with_grass", 1, "default:dirt", 3,
 	nil, nil, nil, nil, nil, 3, 71, 45, 65, 1) -- ADDED
 
 add_biome("bamboo", nil, "ethereal:bamboo_dirt", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 7, 70, 45, 75, ethereal.bamboo)
+	nil, nil, nil, nil, nil, 25, 70, 45, 75, ethereal.bamboo)
 
 --add_biome("bamboo_ocean", nil, "default:sand", 1, "default:sand", 2,
 	--nil, nil, nil, nil, nil, -192, 2, 45, 75, ethereal.bamboo)
 
 add_biome("sakura", nil, "ethereal:bamboo_dirt", 1, "default:dirt", 3,
-	nil, nil, nil, nil, nil, 3, 7, 45, 75, ethereal.sakura)
+	nil, nil, nil, nil, nil, 3, 25, 45, 75, ethereal.sakura)
 
 add_biome("sakura_ocean", nil, "default:sand", 1, "default:sand", 2,
 	nil, nil, nil, nil, nil, -192, 2, 45, 75, ethereal.sakura)
@@ -256,7 +257,7 @@ local add_schem = function(a, b, c, d, e, f, g, h)
 		y_max = e,
 		schematic = f,
 		flags = "place_center_x, place_center_z",
-        replacements = h,
+		replacements = h,
 	})
 end
 
@@ -280,7 +281,7 @@ if ethereal.glacier then
 end
 
 --sakura tree
-add_schem({"ethereal:bamboo_dirt"}, 0.01, {"sakura"}, 1, 100, path .. "sakura.mts", ethereal.sakura)
+add_schem({"ethereal:bamboo_dirt"}, 0.01, {"sakura"}, 7, 100, ethereal.sakura_tree, ethereal.sakura)
 
 -- redwood tree
 add_schem({"default:dirt_with_dry_grass"}, 0.0025, {"mesa"}, 1, 100, ethereal.redwood_tree, ethereal.mesa)
@@ -804,7 +805,7 @@ minetest.override_item("default:coral_brown", {groups = {crumbly = 3}})
 		},
 		y_min = -8,
 		y_max = -2,
-		schematic = dpath .. "corals.mts",
+		schematic = path .. "corals.mts",
 		flags = "place_center_x, place_center_z",
 		rotation = "random",
 	})
